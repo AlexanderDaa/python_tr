@@ -1,15 +1,15 @@
 
 from selenium import webdriver
 from fixture.session import SessionHelper
-from fixture.group import GroupHelper
+from fixture.contact import ContactHelper
 from fixture.managerHelpers import ManagerHelper
 
-class Application:
+class Application2:
     def __init__(self):
         self.wd = webdriver.Firefox()
         self.wd.implicitly_wait(30)
         #self.session = SessionHelper(self)
-        #self.group = GroupHelper(self)
+        #self.contact = ContactHelper(self)
         self.manager = ManagerHelper(self)
 
     def open_home_page(self):
@@ -18,3 +18,5 @@ class Application:
 
     def destroy(self):
         self.wd.quit()
+
+

@@ -1,5 +1,4 @@
 
-
 class SessionHelper:
     def __init__(self, app):
         self.app = app
@@ -16,5 +15,4 @@ class SessionHelper:
     def logout(self):
         wd = self.app.wd
         wd.find_element_by_link_text("Logout").click()
-        # если убрать, второй тест из test_add_group не хочет работать :(
-        wd.find_element_by_link_text("Logout").click()
+
