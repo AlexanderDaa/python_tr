@@ -12,3 +12,4 @@ def test_add_contact(app):
                                 phone2="1232", notes="qwerty2",
                                 photo="C:\_users\Alexander\__kurs\gitP\python_tr\photo.png"))
 
+

@@ -39,4 +39,3 @@ class SessionHelper:
                 self.logout()
         self.login(username, password)
 
-

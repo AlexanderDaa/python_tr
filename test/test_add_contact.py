@@ -2,6 +2,7 @@
 
 from model.contact import Contact
 
+
 def test_add_contact(app):
     app.contact.add_new(Contact(firstname="f_name", middlename="m_name", lastname="l_name", nickname="nick_name",
                                 title="title", company="company", address="address, qqq", home_phone="12-12-12",
