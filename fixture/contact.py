@@ -90,3 +90,7 @@ class ContactHelper:
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(contact.notes)
 
+    def count(self):
+        wd = self.app.wd
+        wd.find_element_by_link_text("home").click()
+        return len(wd.find_elements_by_name("selected[]"))
