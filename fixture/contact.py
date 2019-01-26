@@ -1,7 +1,6 @@
 from selenium.webdriver.support.ui import Select
 
 
-
 class ContactHelper:
 
     def __init__(self, app):
@@ -17,6 +16,7 @@ class ContactHelper:
         # delete confirmation
         wd.switch_to_alert().accept()
         # wait
+        wd.implicitly_wait(5)
         wd.find_element_by_link_text("Last name")
 
     def add_new(self, contact):
@@ -92,5 +92,11 @@ class ContactHelper:
 
     def count(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("home").click()
+        self.open_contact_page()
         return len(wd.find_elements_by_name("selected[]"))
+
+    def open_contact_page(self):
+        wd = self.app.wd
+        if not(wd.current_url.endswith("/addressbook/") and len(wd.find_elements_by_link_text("Last name")) > 0):
+            wd.find_element_by_link_text("home").click()
+
