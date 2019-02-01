@@ -2,7 +2,7 @@
 from model.contact import Contact
 
 
-def test_add_contact(app):
+def test_modify_contact(app):
     if app.contact.count() == 0:
         app.contact.add_new(Contact(firstname="addbeforechng", middlename="", lastname="", nickname="",
                                 title="", company="", address="", home_phone="1",
@@ -20,3 +20,7 @@ def test_add_contact(app):
                                 photo="C:\_users\Alexander\__kurs\gitP\python_tr\photo.png"))
 
 
+def test_modify_contact_firstname(app):
+    if app.contact.count() == 0:
+        app.contact.add_new(Contact(firstname="addbeforechng"))
+    app.contact.change_first_contact(Contact(firstname="f_name2_mod"))
