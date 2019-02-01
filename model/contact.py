@@ -6,7 +6,7 @@ class Contact:
                              mobile_phone=None, work_phone=None, fax=None, email=None,
                              email2=None, email3=None, homepage=None, bday=None, bmonth=None,
                              byear=None, aday=None, amonth=None, ayear=None, address2=None,
-                             phone2=None, notes=None, photo=None):
+                             phone2=None, notes=None, photo=None, id=None):
         self.firstname = firstname
         self.middlename = middlename
         self.lastname = lastname
@@ -32,4 +32,5 @@ class Contact:
         self.phone2 = phone2
         self.notes = notes
         self.photo = photo
+        self.id = id
 

@@ -2,7 +2,7 @@
 from model.contact import Contact
 
 
-def test_add_contact(app):
+def test_del_contact(app):
     if app.contact.count() == 0:
         app.contact.add_new(Contact(firstname="addbeforedel", middlename="", lastname="", nickname="",
                                 title="", company="", address="", home_phone="1",
@@ -11,6 +11,7 @@ def test_add_contact(app):
                                 byear="1974", aday="2", amonth="January", ayear="2001", address2="a2, www2",
                                 phone2="132", notes="qwey2",
                                 photo="C:\_users\Alexander\__kurs\gitP\python_tr\photo.png"))
+    old_contacts = app.contact.get_contact_list()
     app.contact.delete_first_contact()
-
-
+    new_contacts = app.contact.get_contact_list()
+    assert len(old_contacts)-1 == len(new_contacts)
