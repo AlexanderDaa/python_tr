@@ -21,10 +21,13 @@ class GroupHelper:
         self.group_cache = None
 
     def change_first_group(self, group):
+        self.change_group_by_index(index=0, group=group)
+
+    def change_group_by_index(self, index, group):
         wd = self.app.wd
         self.open_groups_page()
-        # select first group
-        wd.find_element_by_name("selected[]").click()
+        # select some group
+        wd.find_elements_by_name("selected[]")[index].click()
         # click "edit group"
         wd.find_element_by_name("edit").click()
         # fill group form
@@ -52,14 +55,22 @@ class GroupHelper:
             wd.find_element_by_link_text("groups").click()
 
     def delete_first_group(self):
+        self.delete_group_by_index(0)
+
+    def delete_group_by_index(self, index):
         wd = self.app.wd
         self.open_groups_page()
         # select
-        wd.find_element_by_name("selected[]").click()
+        wd.find_elements_by_name("selected[]")[index].click()
         # delete
         wd.find_element_by_name("delete").click()
         self.return_to_groups_page()
         self.group_cache = None
+
+
+
+
+
 
     def count(self):
         wd = self.app.wd

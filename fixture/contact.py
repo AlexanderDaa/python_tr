@@ -7,10 +7,13 @@ class ContactHelper:
         self.app = app
 
     def delete_first_contact(self):
+        self.delete_contact_by_index(0)
+
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
-        # select first contact
-        wd.find_element_by_name("selected[]").click()
+        # select some contact
+        wd.find_elements_by_name("selected[]")[index].click()
         # delete
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         # delete confirmation
@@ -19,6 +22,7 @@ class ContactHelper:
         wd.implicitly_wait(5)
         wd.find_element_by_link_text("Last name")
         self.contact_cache = None
+
 
     def add_new(self, contact):
         wd = self.app.wd
@@ -31,12 +35,15 @@ class ContactHelper:
         self.contact_cache = None
 
     def change_first_contact(self, contact):
+        self.change_contact_by_index(index=0, contact=contact)
+
+    def change_contact_by_index(self, index, contact):
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
-        # select first contact
-        wd.find_element_by_name("selected[]").click()
-        # click "edit"
-        wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        # select some contact
+        wd.find_elements_by_name("selected[]")[index].click()
+        # click the "edit"
+        wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
         # fill contact form
         self.fill_contact_form(contact)
         # update
