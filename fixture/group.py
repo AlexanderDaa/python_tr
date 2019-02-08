@@ -67,17 +67,12 @@ class GroupHelper:
         self.return_to_groups_page()
         self.group_cache = None
 
-
-
-
-
-
     def count(self):
         wd = self.app.wd
         self.open_groups_page()
         return len(wd.find_elements_by_name("selected[]"))
 
-    group_cache =None
+    group_cache = None
 
     def get_group_list(self):
         if self.group_cache is None:
