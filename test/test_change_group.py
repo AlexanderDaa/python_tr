@@ -1,13 +1,27 @@
 # -*- coding: utf-8 -*-
 from model.group import Group
 from random import randrange
+import pytest
+import random
+import string
 
-def test_modify_group(app):
+
+def random_string(prefix, maxlen):
+    symbols = string.ascii_letters + string.digits
+    return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
+
+
+test_data_G = [Group(name=random_string("name",10), header=random_string("header",20), footer=random_string("footer",20))
+    for i in range(5)]
+
+
+@pytest.mark.parametrize("group", test_data_G, ids=[repr(x) for x in test_data_G])
+def test_modify_group(app, group):
     if app.group.count() == 0:
-        app.group.create(Group(name="addbeforechng", header="", footer=""))
+        app.group.create(Group(name="a", header="b", footer="c"))
     old_groups = app.group.get_group_list()
     index = randrange(len(old_groups))
-    group = Group(name="group123 changed", header="header123 changed", footer="footer123 changed")
+    print(index)
     group.id = old_groups[index].id
     app.group.change_group_by_index(index,  group)
     assert len(old_groups) == app.group.count()
