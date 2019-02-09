@@ -2,6 +2,7 @@ import  re
 from random import randrange
 from fixture.contact import Contact
 
+
 def test_phones_on_home_page(app):
     if app.contact.count() == 0:
         app.contact.add_new(Contact(firstname="addbeforechng", middlename="", lastname="", nickname="",
@@ -12,13 +13,14 @@ def test_phones_on_home_page(app):
                                 phone2="132", notes="qwey2",
                                 photo="C:\_users\Alexander\__kurs\gitP\python_tr\photo.png"))
     index = randrange(app.contact.count())
-    print(str(index))
+    #print(str(index))
     contact_from_home_page = app.contact.get_contact_list()[index]
     contact_from_edit_page = app.contact.get_contact_info_from_edit_page(index)
     assert contact_from_home_page.all_phones_from_home_page == merge_phones_like_on_home_page(contact_from_edit_page)
     assert contact_from_home_page.firstname == contact_from_edit_page.firstname
     assert contact_from_home_page.lastname == contact_from_edit_page.lastname
     assert contact_from_home_page.address == contact_from_edit_page.address
+    assert contact_from_home_page.all_emails_from_home_page == merge_emails_like_on_home_page(contact_from_edit_page)
 
 
 def test_phones_on_contact_view_page(app):
@@ -31,7 +33,7 @@ def test_phones_on_contact_view_page(app):
                                 phone2="132", notes="qwey2",
                                 photo="C:\_users\Alexander\__kurs\gitP\python_tr\photo.png"))
     index = randrange(app.contact.count())
-    print(str(index))
+    #print(str(index))
     contact_from_view_page = app.contact.get_contact_from_view_page(index)
     contact_from_edit_page = app.contact.get_contact_info_from_edit_page(index)
     assert contact_from_view_page.home_phone == contact_from_edit_page.home_phone
@@ -43,9 +45,16 @@ def test_phones_on_contact_view_page(app):
 def clear(s):
     return re.sub("[() -]", "", s)
 
+
 def merge_phones_like_on_home_page(contact):
     return "\n".join(filter(lambda x: x!='',
                             map(lambda x: clear(x),
                                 filter(lambda x: x is not None,
                                     ([contact.home_phone, contact.mobile_phone, contact.work_phone, contact.phone2])))))
 
+
+def merge_emails_like_on_home_page(contact):
+    return "\n".join(filter(lambda x: x!='',
+                            map(lambda x: clear(x),
+                                filter(lambda x: x is not None,
+                                    ([contact.email, contact.email2, contact.email3])))))

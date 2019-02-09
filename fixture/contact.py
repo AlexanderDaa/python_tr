@@ -151,7 +151,7 @@ class ContactHelper:
                 emails = cells[4].text
                 all_phones = cells[5].text
                 self.contact_cache.append(Contact(id=id, firstname=f_name, lastname=l_name,
-                                                  address=address, all_email = emails,
+                                                  address=address, all_emails_from_home_page = emails,
                                                   all_phones_from_home_page = all_phones))
                 #print(id)
                 #print(l_name)
