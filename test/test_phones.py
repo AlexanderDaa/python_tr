@@ -1,8 +1,9 @@
-import  re
+
+import re
 from random import randrange
 from fixture.contact import Contact
 import pytest
-from fixture.contact import ContactHelper
+
 
 contact1 = Contact(firstname="addbeforechng", middlename="", lastname="", nickname="",
                    title="", company="", address="", home_phone="1",
@@ -16,12 +17,12 @@ contact1 = Contact(firstname="addbeforechng", middlename="", lastname="", nickna
 test_data_ph = [i for i in range(2)]
 
 
-@pytest.mark.parametrize("index", test_data_ph)
-def test_phones_on_home_page(app, index):
+@pytest.mark.parametrize("q", test_data_ph)
+def test_phones_on_home_page(app, q):
     if app.contact.count() == 0:
         app.contact.add_new(contact1)
     index = randrange(app.contact.count())
-    print(str(index))
+    #print(str(q) + " " + str(index))
     contact_from_home_page = app.contact.get_contact_list()[index]
     contact_from_edit_page = app.contact.get_contact_info_from_edit_page(index)
     assert contact_from_home_page.all_phones_from_home_page == merge_phones_like_on_home_page(contact_from_edit_page)
@@ -35,7 +36,7 @@ def test_phones_on_contact_view_page(app,q):
     if app.contact.count() == 0:
         app.contact.add_new(contact1)
     index = randrange(app.contact.count())
-    print(str(index))
+    #print(str(q) + " " + str(index))
     contact_from_view_page = app.contact.get_contact_from_view_page(index)
     contact_from_edit_page = app.contact.get_contact_info_from_edit_page(index)
     assert contact_from_view_page.home_phone == contact_from_edit_page.home_phone

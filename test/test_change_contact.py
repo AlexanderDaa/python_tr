@@ -20,7 +20,7 @@ test_data_C = [
             bday=random.choice('123456789'), bmonth='April', byear='1973', aday=random.choice('123456789'),
             amonth="January", ayear="2000", address2=random_string("address2_",10),phone2=random_string("phone2_",10),
             notes=random_string("notes",10), photo="C:\_users\Alexander\__kurs\gitP\python_tr\photo.png")
-    for i in range(5)]
+    for i in range(3)]
 
 
 @pytest.mark.parametrize("contact", test_data_C, ids=[repr(x) for x in test_data_C])
