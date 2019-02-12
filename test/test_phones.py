@@ -2,11 +2,10 @@
 import re
 from random import randrange
 from fixture.contact import Contact
-import pytest
 
 
-contact1 = Contact(firstname="addbeforechng", middlename="", lastname="", nickname="",
-                   title="", company="", address="", home_phone="1",
+contact1 = Contact(firstname="addbeforechng", middlename="qq", lastname="qw", nickname="ww",
+                   title="qwqwqw", company="wertyu", address="qwesd", home_phone="1",
                    mobile_phone="11", work_phone="2", fax="32", email="12@22.qq",
                    email2="222@22.qq", email3="332@22.qq", homepage="12.kz", bday="7", bmonth="May",
                    byear="1974", aday="2", amonth="January", ayear="2001", address2="a2, www2",
@@ -14,15 +13,11 @@ contact1 = Contact(firstname="addbeforechng", middlename="", lastname="", nickna
                    photo="C:\_users\Alexander\__kurs\gitP\python_tr\photo.png")
 
 
-test_data_ph = [i for i in range(2)]
-
-
-@pytest.mark.parametrize("q", test_data_ph)
-def test_phones_on_home_page(app, q):
+def test_phones_on_home_page(app):
     if app.contact.count() == 0:
         app.contact.add_new(contact1)
     index = randrange(app.contact.count())
-    #print(str(q) + " " + str(index))
+    #print(str(index))
     contact_from_home_page = app.contact.get_contact_list()[index]
     contact_from_edit_page = app.contact.get_contact_info_from_edit_page(index)
     assert contact_from_home_page.all_phones_from_home_page == merge_phones_like_on_home_page(contact_from_edit_page)
@@ -31,12 +26,12 @@ def test_phones_on_home_page(app, q):
     assert contact_from_home_page.address == contact_from_edit_page.address
     assert contact_from_home_page.all_emails_from_home_page == merge_emails_like_on_home_page(contact_from_edit_page)
 
-@pytest.mark.parametrize("q", test_data_ph)
-def test_phones_on_contact_view_page(app,q):
+
+def test_phones_on_contact_view_page(app):
     if app.contact.count() == 0:
         app.contact.add_new(contact1)
     index = randrange(app.contact.count())
-    #print(str(q) + " " + str(index))
+    #print(str(index))
     contact_from_view_page = app.contact.get_contact_from_view_page(index)
     contact_from_edit_page = app.contact.get_contact_info_from_edit_page(index)
     assert contact_from_view_page.home_phone == contact_from_edit_page.home_phone
