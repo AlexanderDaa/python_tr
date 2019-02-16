@@ -2,7 +2,7 @@
 import re
 from random import randrange
 from fixture.contact import Contact
-import pytest
+import os.path
 
 
 contact1 = Contact(firstname="addbeforechng", middlename="", lastname="", nickname="",
@@ -11,7 +11,7 @@ contact1 = Contact(firstname="addbeforechng", middlename="", lastname="", nickna
                    email2="222@22.qq", email3="332@22.qq", homepage="12.kz", bday="7", bmonth="May",
                    byear="1974", aday="2", amonth="January", ayear="2001", address2="a2, www2",
                    phone2="132", notes="qwey2",
-                   photo="C:\_users\Alexander\__kurs\gitP\python_tr\photo.png")
+                   photo=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "photo.png"))
 
 
 def test_phones_on_home_page(app):

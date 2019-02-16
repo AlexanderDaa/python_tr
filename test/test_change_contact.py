@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
 from random import randrange
-import pytest
-from data.contacts import constant as test_data_C
 
 
-@pytest.mark.parametrize("contact", test_data_C, ids=[repr(x) for x in test_data_C])
-def test_modify_contact(app, contact):
+def test_modify_contact(app, data_contacts):
+    contact = data_contacts
     if app.contact.count() == 0:
         app.contact.add_new(Contact(firstname="addbeforechng", middlename="mmm", lastname="lll", nickname="nnn"))
     old_contacts = app.contact.get_contact_list()
