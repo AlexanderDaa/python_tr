@@ -3,8 +3,8 @@ from model.contact import Contact
 from random import randrange
 
 
-def test_modify_contact(app, data_contacts):
-    contact = data_contacts
+def test_modify_contact(app, json_contacts):
+    contact = json_contacts
     if app.contact.count() == 0:
         app.contact.add_new(Contact(firstname="addbeforechng", middlename="mmm", lastname="lll", nickname="nnn"))
     old_contacts = app.contact.get_contact_list()
