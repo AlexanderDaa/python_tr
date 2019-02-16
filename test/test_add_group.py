@@ -2,7 +2,7 @@
 
 from model.group import Group
 import pytest
-from data.add_group import constant as test_data_G
+from data.groups import constant as test_data_G
 
 
 @pytest.mark.parametrize("group", test_data_G, ids=[repr(x) for x in test_data_G])

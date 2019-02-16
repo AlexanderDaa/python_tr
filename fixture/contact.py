@@ -65,9 +65,9 @@ class ContactHelper:
         if contact.nickname:
             wd.find_element_by_name("nickname").clear()
             wd.find_element_by_name("nickname").send_keys(contact.nickname)
-        #if contact.photo:
-            # wd.find_element_by_name("photo").clear()
-            # wd.find_element_by_name("photo").send_keys(contact.photo)
+        if contact.photo:
+            wd.find_element_by_name("photo").clear()
+            wd.find_element_by_name("photo").send_keys(contact.photo)
         if contact.title:
             wd.find_element_by_name("title").clear()
             wd.find_element_by_name("title").send_keys(contact.title)

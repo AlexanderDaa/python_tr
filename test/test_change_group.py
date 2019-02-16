@@ -2,17 +2,7 @@
 from model.group import Group
 from random import randrange
 import pytest
-import random
-import string
-
-
-def random_string(prefix, maxlen):
-    symbols = string.ascii_letters + string.digits
-    return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
-
-
-test_data_G = [Group(name=random_string("name",10), header=random_string("header",20), footer=random_string("footer",20))
-    for i in range(3)]
+from data.groups import constant as test_data_G
 
 
 @pytest.mark.parametrize("group", test_data_G, ids=[repr(x) for x in test_data_G])
@@ -29,18 +19,3 @@ def test_modify_group(app, group):
     old_groups[index] = group
     assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)
 
-#def test_modify_group_name(app):
-#    if app.group.count() == 0:
-#        app.group.create(Group(name="Newname"))
-#    old_groups = app.group.get_group_list()
-#    app.group.change_first_group(Group(name="Newname2"))
-#    new_groups = app.group.get_group_list()
-#    assert len(old_groups) == len(new_groups)
-
-#def test_modify_group_header(app):
-#    if app.group.count() == 0:
-#        app.group.create(Group(header="Newheader"))
-#    old_groups = app.group.get_group_list()
-#    app.group.change_first_group(Group(header="Newheader2"))
-#    new_groups = app.group.get_group_list()
-#    assert len(old_groups) == len(new_groups)
