@@ -53,15 +53,22 @@ class ContactHelper:
 
     def fill_contact_form(self,contact):
         wd = self.app.wd
-        if contact.firstname:
-            wd.find_element_by_name("firstname").clear()
-            wd.find_element_by_name("firstname").send_keys(contact.firstname)
+
+        #for x in contact.__dict__:
+        #    if not getattr(contact, x):
+        #        setattr(contact, x, "")
+        #print(contact.__dict__)
+        if not contact.firstname:
+            contact.firstname=""
+        wd.find_element_by_name("firstname").clear()
+        wd.find_element_by_name("firstname").send_keys(contact.firstname)
         if contact.middlename:
             wd.find_element_by_name("middlename").clear()
             wd.find_element_by_name("middlename").send_keys(contact.middlename)
-        if contact.lastname:
-            wd.find_element_by_name("lastname").clear()
-            wd.find_element_by_name("lastname").send_keys(contact.lastname)
+        if not contact.lastname:
+            contact.lastname=""
+        wd.find_element_by_name("lastname").clear()
+        wd.find_element_by_name("lastname").send_keys(contact.lastname)
         if contact.nickname:
             wd.find_element_by_name("nickname").clear()
             wd.find_element_by_name("nickname").send_keys(contact.nickname)

@@ -39,9 +39,14 @@ class GroupHelper:
 
     def fill_group_form(self, group):
         wd = self.app.wd
-        if group.name:
-            wd.find_element_by_name("group_name").clear()
-            wd.find_element_by_name("group_name").send_keys(group.name)
+        #for x in group.__dict__:
+        #    if not getattr(group, x):
+        #        setattr(group, x, "")
+
+        if not group.name:
+            group.name=""
+        wd.find_element_by_name("group_name").clear()
+        wd.find_element_by_name("group_name").send_keys(group.name)
         if group.header:
             wd.find_element_by_name("group_header").clear()
             wd.find_element_by_name("group_header").send_keys(group.header)
@@ -64,6 +69,21 @@ class GroupHelper:
         wd.find_elements_by_name("selected[]")[index].click()
         # delete
         wd.find_element_by_name("delete").click()
+        self.return_to_groups_page()
+        self.group_cache = None
+
+
+    def change_group_by_id(self, id, group):
+        wd = self.app.wd
+        self.open_groups_page()
+        # select some group
+        self.select_group_by_id(id)
+        # click "edit group"
+        wd.find_element_by_name("edit").click()
+        # fill group form
+        self.fill_group_form(group)
+        # update
+        wd.find_element_by_name("update").click()
         self.return_to_groups_page()
         self.group_cache = None
 
