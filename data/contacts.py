@@ -4,7 +4,7 @@ import random
 import os.path
 
 
-test_data = [
+test_data = [Contact(firstname="",middlename="", lastname="")]+[
     Contact(firstname="fname1", middlename="mname1", lastname="lname1",
             nickname="nname1", title="title", company="company",
             address="address", home_phone="hphone1", mobile_phone="mphone1",

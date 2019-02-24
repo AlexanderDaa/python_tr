@@ -51,6 +51,28 @@ class ContactHelper:
         wd.find_element_by_link_text("home page").click()
         self.contact_cache = None
 
+    def select_contact_by_id(self, id):
+        wd= self.app.wd
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()
+
+    def change_contact_by_id(self, id, contact):
+        wd = self.app.wd
+        wd.find_element_by_link_text("home").click()
+        # select some contact
+        self.select_contact_by_id(id)
+        # click the "edit"
+        #wd.find_elements_by_xpath("//img[@alt='Edit']")[int(id)].click()
+        wd.find_element_by_css_selector("a[href=\"edit.php?id='%s'\"] img[title=\"Edit\"]" % id).click()
+        #wd.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='lname43eX'])[2]/preceding::img[3]").click()
+
+
+        # fill contact form
+        self.fill_contact_form(contact)
+        # update
+        wd.find_element_by_name("update").click()
+        wd.find_element_by_link_text("home page").click()
+        self.contact_cache = None
+
     def fill_contact_form(self,contact):
         wd = self.app.wd
 
@@ -72,9 +94,9 @@ class ContactHelper:
         if contact.nickname:
             wd.find_element_by_name("nickname").clear()
             wd.find_element_by_name("nickname").send_keys(contact.nickname)
-        if contact.photo:
-            wd.find_element_by_name("photo").clear()
-            wd.find_element_by_name("photo").send_keys(contact.photo)
+        #if contact.photo:
+        #    wd.find_element_by_name("photo").clear()
+        #    wd.find_element_by_name("photo").send_keys(contact.photo)
         if contact.title:
             wd.find_element_by_name("title").clear()
             wd.find_element_by_name("title").send_keys(contact.title)
