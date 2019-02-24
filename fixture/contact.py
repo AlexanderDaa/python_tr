@@ -62,10 +62,9 @@ class ContactHelper:
         self.select_contact_by_id(id)
         # click the "edit"
         #wd.find_elements_by_xpath("//img[@alt='Edit']")[int(id)].click()
-        wd.find_element_by_css_selector("a[href=\"edit.php?id='%s'\"] img[title=\"Edit\"]" % id).click()
-        #wd.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='lname43eX'])[2]/preceding::img[3]").click()
-
-
+        css = "a[href=\"edit.php?id=" + str(id)+"\"] img[title='Edit']"
+        #wd.find_element_by_css_selector("a[href=\"edit.php?id=43\"] img[title='Edit']").click()
+        wd.find_element_by_css_selector(css).click()
         # fill contact form
         self.fill_contact_form(contact)
         # update
