@@ -55,6 +55,20 @@ class ContactHelper:
         wd= self.app.wd
         wd.find_element_by_css_selector("input[value='%s']" % id).click()
 
+    def delete_contact_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_link_text("home").click()
+        # select some contact
+        self.select_contact_by_id(id)
+        # delete
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        # delete confirmation
+        wd.switch_to_alert().accept()
+        # wait
+        wd.implicitly_wait(5)
+        wd.find_element_by_link_text("Last name")
+        self.contact_cache = None
+
     def change_contact_by_id(self, id, contact):
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
