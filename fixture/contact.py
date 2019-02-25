@@ -66,6 +66,7 @@ class ContactHelper:
         wd.switch_to_alert().accept()
         # wait
         wd.implicitly_wait(5)
+        wd.find_element_by_css_selector("div.msgbox")  #проверить на рабочем компе
         wd.find_element_by_link_text("Last name")
         self.contact_cache = None
 
@@ -88,11 +89,6 @@ class ContactHelper:
 
     def fill_contact_form(self,contact):
         wd = self.app.wd
-
-        #for x in contact.__dict__:
-        #    if not getattr(contact, x):
-        #        setattr(contact, x, "")
-        #print(contact.__dict__)
         if not contact.firstname:
             contact.firstname=""
         wd.find_element_by_name("firstname").clear()
