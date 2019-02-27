@@ -21,6 +21,7 @@ class ContactHelper:
         wd.switch_to_alert().accept()
         # wait
         wd.implicitly_wait(5)
+        wd.find_element_by_css_selector("div.msgbox")
         wd.find_element_by_link_text("Last name")
         self.contact_cache = None
 
@@ -243,8 +244,32 @@ class ContactHelper:
                        work_phone=workphone, phone2=secondaryphone)
 
 
+    def add_contact_to_group_by_id(self,id_c,id_gr):
+        wd = self.app.wd
+        self.app.open_home_page()
+        self.select_contact_by_id(id_c)
+        wd.find_element_by_name("to_group").click()
+        #Select(driver.find_element_by_css_selector("select[name=\"to_group\"]")).select_by_visible_text("namegru")
+        wd.find_element_by_css_selector("select[name=\"to_group\"] > option[value=\"%s\"]" % id_gr).click()
+        wd.find_element_by_css_selector("input[name=\"add\"]").click()
+        wd.implicitly_wait(5)
+        wd.find_element_by_css_selector("i > a").click()
+
+    def del_contact_fm_group_by_id(self, id_gr, id_cont):
+        pass
 
 
+        #driver = self.driver
+        #driver.get("http://localhost/addressbook/")
+        #driver.find_element_by_css_selector("select[name=\"group\"]").click()
+        #Select(driver.find_element_by_name("group")).select_by_visible_text("namegru")
+        #driver.find_element_by_css_selector("option[value=\"11\"]").click()
+        #driver.find_element_by_css_selector("#67").click()
+        #driver.find_element_by_css_selector("input[name=\"remove\"]").click()
+        #driver.find_element_by_link_text("home").click()
+        #driver.find_element_by_css_selector("select[name=\"group\"]").click()
+        #Select(driver.find_element_by_name("group")).select_by_visible_text("[all]")
+        #driver.find_element_by_xpath("//option[@value='']").click()
 
 
 
