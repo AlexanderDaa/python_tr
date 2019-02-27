@@ -3,7 +3,7 @@ import re
 from random import randrange
 from fixture.contact import Contact
 import os.path
-from fixture.orm import ORMFixture
+
 
 
 contact1 = Contact(firstname="addbeforechng", middlename="", lastname="", nickname="",
@@ -61,7 +61,6 @@ def merge_emails_like_on_home_page(contact):
 
 
 def test_all_phones_on_home_page(app,orm):
-    #db = ORMFixture(host = "127.0.0.1", name = "addressbook", user = "root", password = "")
     if len(orm.get_contact_list()) == 0:
         app.contact.add_new(contact1)
     contact_list_fm_db = sorted(orm.get_contact_list(), key=Contact.id_or_max)

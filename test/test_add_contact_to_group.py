@@ -1,4 +1,4 @@
-from fixture.orm import ORMFixture
+
 from fixture.contact import Contact
 from fixture.group import Group
 import os.path
@@ -14,7 +14,6 @@ contact1 = Contact(firstname="addbeforechng", middlename="", lastname="", nickna
 
 
 def test_add_contacts_to_group(app,orm):
-    #db = ORMFixture(host="127.0.0.1", name="addressbook", user="root", password="")
     if len(orm.get_contact_list()) == 0:
         app.contact.add_new(contact1)
     if len(orm.get_group_list()) == 0:
@@ -25,8 +24,6 @@ def test_add_contacts_to_group(app,orm):
     #group_list_fm_gp = sorted(app.group.get_group_list(), key=Contact.id_or_max)
     #assert contact_list_fm_hp == contact_list_fm_db
     #assert group_list_fm_gp == group_list_fm_db
-    #print(db.get_contact_list())
-    #print(db.get_group_list())
     #app.contact.add_contact_to_group_by_id(67,11)
     # пока все работает: добавление контакта 67 в группу 11
     contact_for_add = random.choice(contact_list_fm_db)
