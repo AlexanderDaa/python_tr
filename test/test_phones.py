@@ -60,11 +60,11 @@ def merge_emails_like_on_home_page(contact):
                                     ([contact.email, contact.email2, contact.email3])))))
 
 
-def test_all_phones_on_home_page(app):
-    db = ORMFixture(host = "127.0.0.1", name = "addressbook", user = "root", password = "")
-    if len(db.get_contact_list()) == 0:
+def test_all_phones_on_home_page(app,orm):
+    #db = ORMFixture(host = "127.0.0.1", name = "addressbook", user = "root", password = "")
+    if len(orm.get_contact_list()) == 0:
         app.contact.add_new(contact1)
-    contact_list_fm_db = sorted(db.get_contact_list(), key=Contact.id_or_max)
+    contact_list_fm_db = sorted(orm.get_contact_list(), key=Contact.id_or_max)
     contact_list_fm_hp = sorted(app.contact.get_contact_list(), key=Contact.id_or_max)
     #print(contact_list_fm_db)
     #print(contact_list_fm_hp)
@@ -87,14 +87,3 @@ def test_all_phones_on_home_page(app):
         assert contact_list_fm_hp[ii].all_phones_from_home_page == merge_phones_like_on_home_page(i)
     print("%s contacts checked" % ii)
 
-#    index = randrange(app.contact.count())
-    #print(str(index))
-#    contact_from_home_page = app.contact.get_contact_list()[index]
-#    contact_from_edit_page = app.contact.get_contact_info_from_edit_page(index)
-
-#    assert contact_from_home_page.firstname == contact_from_edit_page.firstname
-#    assert contact_from_home_page.lastname == contact_from_edit_page.lastname
-#    assert contact_from_home_page.address == contact_from_edit_page.address
-
-#    assert contact_from_home_page.all_phones_from_home_page == merge_phones_like_on_home_page(contact_from_edit_page)
-#    assert contact_from_home_page.all_emails_from_home_page == merge_emails_like_on_home_page(contact_from_edit_page)

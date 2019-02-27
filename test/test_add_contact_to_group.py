@@ -13,15 +13,15 @@ contact1 = Contact(firstname="addbeforechng", middlename="", lastname="", nickna
                    photo=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "photo.png"))
 
 
-def test_add_contacts_to_group(app):
-    db = ORMFixture(host="127.0.0.1", name="addressbook", user="root", password="")
-    if len(db.get_contact_list()) == 0:
+def test_add_contacts_to_group(app,orm):
+    #db = ORMFixture(host="127.0.0.1", name="addressbook", user="root", password="")
+    if len(orm.get_contact_list()) == 0:
         app.contact.add_new(contact1)
-    if len(db.get_group_list()) == 0:
+    if len(orm.get_group_list()) == 0:
         app.group.create(Group(name="addbeforedel", header="", footer=""))
-    contact_list_fm_db = sorted(db.get_contact_list(), key=Contact.id_or_max)
+    contact_list_fm_db = sorted(orm.get_contact_list(), key=Contact.id_or_max)
     #contact_list_fm_hp = sorted(app.contact.get_contact_list(), key=Contact.id_or_max)
-    group_list_fm_db = sorted(db.get_group_list(), key=Contact.id_or_max)
+    group_list_fm_db = sorted(orm.get_group_list(), key=Contact.id_or_max)
     #group_list_fm_gp = sorted(app.group.get_group_list(), key=Contact.id_or_max)
     #assert contact_list_fm_hp == contact_list_fm_db
     #assert group_list_fm_gp == group_list_fm_db
@@ -36,7 +36,8 @@ def test_add_contacts_to_group(app):
     app.contact.add_contact_to_group_by_id(contact_for_add.id, group_to_add.id)
     # контакт добавляется в группу (если его там нет)
     # получаем список контактов для группы group_to_add
-    cont_in_gr = db.get_contacts_in_group(group_to_add)
+    cont_in_gr = orm.get_contacts_in_group(group_to_add)
     assert contact_for_add in cont_in_gr
     #print(sorted(cont_in_gr, key=Contact.id_or_max))
+
 
