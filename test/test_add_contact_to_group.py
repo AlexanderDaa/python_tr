@@ -18,23 +18,40 @@ def test_add_contacts_to_group(app,orm):
         app.contact.add_new(contact1)
     if len(orm.get_group_list()) == 0:
         app.group.create(Group(name="addbeforedel", header="", footer=""))
-    contact_list_fm_db = sorted(orm.get_contact_list(), key=Contact.id_or_max)
-    #contact_list_fm_hp = sorted(app.contact.get_contact_list(), key=Contact.id_or_max)
-    group_list_fm_db = sorted(orm.get_group_list(), key=Contact.id_or_max)
-    #group_list_fm_gp = sorted(app.group.get_group_list(), key=Contact.id_or_max)
-    #assert contact_list_fm_hp == contact_list_fm_db
-    #assert group_list_fm_gp == group_list_fm_db
-    #app.contact.add_contact_to_group_by_id(67,11)
-    # пока все работает: добавление контакта 67 в группу 11
+    # выбираем контакт, который будем добавлять
+    contact_list_fm_db = orm.get_contact_list()
     contact_for_add = random.choice(contact_list_fm_db)
-    group_to_add = random.choice(group_list_fm_db)
-    #print("\n",contact_for_add.id," - контакт")
-    #print(group_to_add.id," - группа")
-    app.contact.add_contact_to_group_by_id(contact_for_add.id, group_to_add.id)
-    # контакт добавляется в группу (если его там нет)
+    # составляем список групп, в которых нет этого контакта
+    group_list_fm_db = orm.get_group_list()
+    group_list_without_contact_for_add = []
+    for gr in group_list_fm_db:
+        if contact_for_add not in orm.get_contacts_in_group(gr):
+            group_list_without_contact_for_add.append(gr)
+    #print(group_list_without_contact_for_add)
+    #print(contact_for_add)
+	# проверяем список групп, в которых нет выбранного контакта 
+	# и выбираем группу, в которую будем его добавлять 
+    if len(group_list_without_contact_for_add) == 0:
+        # если групп без этого контакта нет, выбираем группу из общего списка и удаляем из нее контакт
+        group_to_add = random.choice(group_list_fm_db)
+        app.contact.del_contact_fm_group_by_id(group_to_add.id, contact_for_add.id)
+        #print("группа выбрана из общего списка групп")
+    else:
+        # если такие группы есть, выбираем группу из списка групп, в которых нет контакта
+        group_to_add = random.choice(group_list_without_contact_for_add)
+        #print("группа выбрана из списка групп, в которых нет контакта")
     # получаем список контактов для группы group_to_add
     cont_in_gr = orm.get_contacts_in_group(group_to_add)
+    # проверяем, что в группе нет контакта 
+    assert contact_for_add not in cont_in_gr
+    # контакт добавляем в группу
+    app.contact.add_contact_to_group_by_id(contact_for_add.id, group_to_add.id)
+    # получаем новый список контактов для группы group_to_add
+    cont_in_gr = orm.get_contacts_in_group(group_to_add)
     assert contact_for_add in cont_in_gr
-    #print(sorted(cont_in_gr, key=Contact.id_or_max))
+	
+	
 
-
+	
+	
+	

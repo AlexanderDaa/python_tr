@@ -249,26 +249,23 @@ class ContactHelper:
         self.app.open_home_page()
         self.select_contact_by_id(id_c)
         wd.find_element_by_name("to_group").click()
-        #Select(driver.find_element_by_css_selector("select[name=\"to_group\"]")).select_by_visible_text("namegru")
         wd.find_element_by_css_selector("select[name=\"to_group\"] > option[value=\"%s\"]" % id_gr).click()
         wd.find_element_by_css_selector("input[name=\"add\"]").click()
         wd.implicitly_wait(5)
+        wd.find_element_by_css_selector("i > a")
         wd.find_element_by_css_selector("i > a").click()
 
     def del_contact_fm_group_by_id(self, id_gr, id_c):
         wd = self.app.wd
         self.app.open_home_page()
         wd.find_element_by_css_selector("select[name=\"group\"]").click()
-        #Select(driver.find_element_by_name("group")).select_by_visible_text("namegru")
         wd.find_element_by_css_selector("option[value=\"%s\"]" % id_gr).click()
-        wd.implicitly_wait(5)
+#        wd.implicitly_wait(5)
         wd.find_element_by_css_selector("input[name=\"remove\"]")
         self.select_contact_by_id(id_c)
-        #wd.find_element_by_css_selector("#%s" % id_c).click()
         wd.find_element_by_css_selector("input[name=\"remove\"]").click()
         wd.find_element_by_link_text("home").click()
         wd.find_element_by_css_selector("select[name=\"group\"]").click()
-        #Select(driver.find_element_by_name("group")).select_by_visible_text("[all]")
         wd.find_element_by_xpath("//option[@value='']").click()
 
 

@@ -13,19 +13,20 @@ contact1 = Contact(firstname="addbeforechng", middlename="", lastname="", nickna
 
 
 def test_add_contacts_to_group(app,orm):
-    if len(orm.get_contact_list()) == 0:
+    if len(orm.get_contact_list()) == 0: # контакты есть
         app.contact.add_new(contact1)
-    if len(orm.get_group_list()) == 0:
+    if len(orm.get_group_list()) == 0: # группы есть
         app.group.create(Group(name="addbeforedel", header="", footer=""))
     group_list_fm_db = orm.get_group_list()
     group_to_del_cont = random.choice(group_list_fm_db)
     cont_in_gr = orm.get_contacts_in_group(group_to_del_cont)
+    # если в выбранной группе нет контактов, добавляем туда контакт (что бы было что удалить)
     if len(cont_in_gr) == 0:
         contact_list_fm_db = orm.get_contact_list()
         contact_for_add = random.choice(contact_list_fm_db)
         app.contact.add_contact_to_group_by_id(contact_for_add.id, group_to_del_cont.id)
         cont_in_gr = orm.get_contacts_in_group(group_to_del_cont)
-    #предусловия соблюдены (есть откуда и что удалять), можно удалять
+	#предусловия соблюдены (есть откуда и что удалять), можно удалять
     #выбираем контакт из уже выбранной группы
     cont_to_del = random.choice(cont_in_gr)
     #print(cont_to_del," - ",cont_to_del.id)
