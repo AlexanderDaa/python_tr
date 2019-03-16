@@ -1,0 +1,131 @@
+{
+  "uid" : "7c00dec044eb0c0c",
+  "name" : "test_modify_group[None:nameemVCQFp:header8Jqwmkdm8e1zJUX:footer2]",
+  "fullName" : "test.test_change_group.test_modify_group[None:nameemVCQFp:header8Jqwmkdm8e1zJUX:footer2]",
+  "historyId" : "bec4319bee57c7c01c81fc65bade28ad",
+  "time" : {
+    "start" : 1552718282968,
+    "stop" : 1552718283478,
+    "duration" : 510
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given a non-empty group list",
+      "time" : {
+        "start" : 1552718283007,
+        "stop" : 1552718283029,
+        "duration" : 22
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Given a random group from the list",
+      "time" : {
+        "start" : 1552718283029,
+        "stop" : 1552718283029,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "When I change the group 124:name1:header1:footer1",
+      "time" : {
+        "start" : 1552718283029,
+        "stop" : 1552718283477,
+        "duration" : 448
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then the new list is equal to the old list with changed group",
+      "time" : {
+        "start" : 1552718283477,
+        "stop" : 1552718283478,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "Akex-ПК"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6196-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.test_change_group"
+  }, {
+    "name" : "testClass",
+    "value" : "test.test_change_group"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_modify_group[None:nameemVCQFp:header8Jqwmkdm8e1zJUX:footer2]"
+  }, {
+    "name" : "package",
+    "value" : "test.test_change_group"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7c00dec044eb0c0c.json",
+  "parameterValues" : [ ]
+}

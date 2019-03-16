@@ -1,0 +1,131 @@
+{
+  "uid" : "635f68e1ec7ff2c8",
+  "name" : "test_modify_contact[None:lnameXSf2vBM:fname0Z8BScbp]",
+  "fullName" : "test.test_change_contact.test_modify_contact[None:lnameXSf2vBM:fname0Z8BScbp]",
+  "historyId" : "180e9d150b9890e8fd0b7e542fad93c1",
+  "time" : {
+    "start" : 1552718277473,
+    "stop" : 1552718278600,
+    "duration" : 1127
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given a non-empty contact list",
+      "time" : {
+        "start" : 1552718277506,
+        "stop" : 1552718277591,
+        "duration" : 85
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Given a random contact from the list",
+      "time" : {
+        "start" : 1552718277591,
+        "stop" : 1552718277591,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "When I change the contact 112:lnameXSf2vBM:fname0Z8BScbp",
+      "time" : {
+        "start" : 1552718277591,
+        "stop" : 1552718278599,
+        "duration" : 1008
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then the new list is equal to the old list with changed contact",
+      "time" : {
+        "start" : 1552718278599,
+        "stop" : 1552718278600,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "Akex-ПК"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6196-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.test_change_contact"
+  }, {
+    "name" : "testClass",
+    "value" : "test.test_change_contact"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_modify_contact[None:lnameXSf2vBM:fname0Z8BScbp]"
+  }, {
+    "name" : "package",
+    "value" : "test.test_change_contact"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "635f68e1ec7ff2c8.json",
+  "parameterValues" : [ ]
+}

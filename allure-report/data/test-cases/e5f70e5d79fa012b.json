@@ -1,0 +1,116 @@
+{
+  "uid" : "e5f70e5d79fa012b",
+  "name" : "test_add_contact[None:lnametxAl:fname]",
+  "fullName" : "test.test_add_contact.test_add_contact[None:lnametxAl:fname]",
+  "historyId" : "d01b3156843c6509ff5a6c88cc39898e",
+  "time" : {
+    "start" : 1552718273864,
+    "stop" : 1552718275550,
+    "duration" : 1686
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given a contact list",
+      "time" : {
+        "start" : 1552718274080,
+        "stop" : 1552718274081,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "When I add the contact None:lnametxAl:fname",
+      "time" : {
+        "start" : 1552718274081,
+        "stop" : 1552718275549,
+        "duration" : 1468
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then the new contact list is equal to the old list with the added contact",
+      "time" : {
+        "start" : 1552718275549,
+        "stop" : 1552718275550,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "Akex-ПК"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6196-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.test_add_contact"
+  }, {
+    "name" : "testClass",
+    "value" : "test.test_add_contact"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_add_contact[None:lnametxAl:fname]"
+  }, {
+    "name" : "package",
+    "value" : "test.test_add_contact"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e5f70e5d79fa012b.json",
+  "parameterValues" : [ ]
+}

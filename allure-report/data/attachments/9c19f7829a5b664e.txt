@@ -1,0 +1,15 @@
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`home`, `c`.`mobile`, `c`.`work`, `c`.`phone2`, `c`.`email`, `c`.`email2`, `c`.`email3`, `c`.`address`, `c`.`address2`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`home`, `c`.`mobile`, `c`.`work`, `c`.`phone2`, `c`.`email`, `c`.`email2`, `c`.`email3`, `c`.`address`, `c`.`address2`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+
+COMMIT
+RELEASE CONNECTION
+10 contacts checked

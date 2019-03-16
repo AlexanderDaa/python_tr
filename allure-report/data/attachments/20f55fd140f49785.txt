@@ -1,0 +1,88 @@
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`home`, `c`.`mobile`, `c`.`work`, `c`.`phone2`, `c`.`email`, `c`.`email2`, `c`.`email3`, `c`.`address`, `c`.`address2`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['133']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[133]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`home`, `c`.`mobile`, `c`.`work`, `c`.`phone2`, `c`.`email`, `c`.`email2`, `c`.`email3`, `c`.`address`, `c`.`address2`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['133']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[133]
+
+SELECT `id`, `firstname`, `lastname`, `home`, `mobile`, `work`, `phone2`, `email`, `email2`, `email3`, `address`, `address2`, `deprecated`
+FROM `addressbook`
+WHERE `id` = %s
+[114]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['133']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[133]
+
+SELECT `id`, `firstname`, `lastname`, `home`, `mobile`, `work`, `phone2`, `email`, `email2`, `email3`, `address`, `address2`, `deprecated`
+FROM `addressbook`
+WHERE `id` = %s
+[114]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['133']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[133]
+
+COMMIT
+RELEASE CONNECTION

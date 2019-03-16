@@ -1,0 +1,131 @@
+{
+  "uid" : "85f525d462f65874",
+  "name" : "test_del_contact",
+  "fullName" : "test.test_del_contact.test_del_contact",
+  "historyId" : "dbd6ee7dcdd983e535c5aba3fbf254a5",
+  "time" : {
+    "start" : 1552718283865,
+    "stop" : 1552718287686,
+    "duration" : 3821
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given a non-empty contact list",
+      "time" : {
+        "start" : 1552718283899,
+        "stop" : 1552718283984,
+        "duration" : 85
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Given a random contact from the list",
+      "time" : {
+        "start" : 1552718283984,
+        "stop" : 1552718283984,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "When I delete the contact 105:lnameXSf2vBM:fname0Z8BScbp",
+      "time" : {
+        "start" : 1552718283984,
+        "stop" : 1552718287684,
+        "duration" : 3700
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Then the new list is equal to the old list without the deleted contact",
+      "time" : {
+        "start" : 1552718287684,
+        "stop" : 1552718287685,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "Akex-ПК"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6196-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.test_del_contact"
+  }, {
+    "name" : "testClass",
+    "value" : "test.test_del_contact"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_del_contact"
+  }, {
+    "name" : "package",
+    "value" : "test.test_del_contact"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "85f525d462f65874.json",
+  "parameterValues" : [ ]
+}

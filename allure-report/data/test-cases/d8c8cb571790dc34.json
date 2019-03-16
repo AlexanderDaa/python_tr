@@ -1,0 +1,197 @@
+{
+  "uid" : "d8c8cb571790dc34",
+  "name" : "test_del_contacts_from_group",
+  "fullName" : "test.test_del_contact_from_group.test_del_contacts_from_group",
+  "historyId" : "81d0480eeb06a6bc4cc7136881422c31",
+  "time" : {
+    "start" : 1552718287686,
+    "stop" : 1552718289807,
+    "duration" : 2121
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given a non-empty contact list",
+      "time" : {
+        "start" : 1552718287904,
+        "stop" : 1552718287908,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Given a non-empty group list",
+      "time" : {
+        "start" : 1552718287908,
+        "stop" : 1552718287910,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Get db group list",
+      "time" : {
+        "start" : 1552718287910,
+        "stop" : 1552718287913,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Get random group",
+      "time" : {
+        "start" : 1552718287913,
+        "stop" : 1552718287913,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Get non-empty contact list from group 133:nameemVCQFp:header8Jqwmkdm8e1zJUX:footer2",
+      "time" : {
+        "start" : 1552718287913,
+        "stop" : 1552718288799,
+        "duration" : 886
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Get random contact from list",
+      "time" : {
+        "start" : 1552718288799,
+        "stop" : 1552718288802,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Remove contact 114:lnametxAl:fname from group 133:nameemVCQFp:header8Jqwmkdm8e1zJUX:footer2",
+      "time" : {
+        "start" : 1552718288802,
+        "stop" : 1552718289805,
+        "duration" : 1003
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Check contact list of the group that no removed contact",
+      "time" : {
+        "start" : 1552718289805,
+        "stop" : 1552718289806,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "20f55fd140f49785",
+      "name" : "Captured stdout call",
+      "source" : "20f55fd140f49785.txt",
+      "type" : "text/plain",
+      "size" : 2420
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "Akex-ПК"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6196-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.test_del_contact_from_group"
+  }, {
+    "name" : "testClass",
+    "value" : "test.test_del_contact_from_group"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_del_contacts_from_group"
+  }, {
+    "name" : "package",
+    "value" : "test.test_del_contact_from_group"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d8c8cb571790dc34.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,273 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "Akex-ПК",
+    "children" : [ {
+      "name" : "6196-MainThread",
+      "children" : [ {
+        "name" : "test_delete_some_group",
+        "uid" : "8630cb9839cdcb3f",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718289808,
+          "stop" : 1552718290427,
+          "duration" : 619
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_modify_group[None:nameWZD8n8q:headermqdv0n0j:footery3LFB2]",
+        "uid" : "93edcfc1b01b1237",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718281612,
+          "stop" : 1552718282419,
+          "duration" : 807
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_modify_group[None:nameemVCQFp:header8Jqwmkdm8e1zJUX:footer2]",
+        "uid" : "7c00dec044eb0c0c",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718282968,
+          "stop" : 1552718283478,
+          "duration" : 510
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_del_contact",
+        "uid" : "85f525d462f65874",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718283865,
+          "stop" : 1552718287686,
+          "duration" : 3821
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_group[None:name6GR4R:header2mp:footer]",
+        "uid" : "eab3575e10dc33a0",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718276966,
+          "stop" : 1552718277184,
+          "duration" : 218
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_modify_group[None:name6GR4R:header2mp:footer]",
+        "uid" : "c783f9873a71389f",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718282420,
+          "stop" : 1552718282967,
+          "duration" : 547
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_all_phones_on_home_page",
+        "uid" : "4e8035e5abfd758a",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718292390,
+          "stop" : 1552718292433,
+          "duration" : 43
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_del_contacts_from_group",
+        "uid" : "d8c8cb571790dc34",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718287686,
+          "stop" : 1552718289807,
+          "duration" : 2121
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_modify_contact[None:lnameXSf2vBM:fname0Z8BScbp]",
+        "uid" : "635f68e1ec7ff2c8",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718277473,
+          "stop" : 1552718278600,
+          "duration" : 1127
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_group_list",
+        "uid" : "5c4aa3e7b09691a9",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718283479,
+          "stop" : 1552718283865,
+          "duration" : 386
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_phones_on_contact_view_page",
+        "uid" : "856f794028d5b381",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718291664,
+          "stop" : 1552718292389,
+          "duration" : 725
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_phones_on_home_page",
+        "uid" : "23b47895457e5d6d",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718290428,
+          "stop" : 1552718291663,
+          "duration" : 1235
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lnameXSf2vBM:fname0Z8BScbp]",
+        "uid" : "ecce8e3d77ed5406",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718265171,
+          "stop" : 1552718272202,
+          "duration" : 7031
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lnamefS1IIbzqY:fnameB4]",
+        "uid" : "1af88d910977968b",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718272202,
+          "stop" : 1552718273863,
+          "duration" : 1661
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_modify_contact[None:lnamefS1IIbzqY:fnameB4]",
+        "uid" : "7583ce906d963a6e",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718278601,
+          "stop" : 1552718280339,
+          "duration" : 1738
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_modify_contact[None:lnametxAl:fname]",
+        "uid" : "29f6f5e48f621a25",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718280340,
+          "stop" : 1552718281611,
+          "duration" : 1271
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contacts_to_group",
+        "uid" : "52c87c122bad1429",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718275551,
+          "stop" : 1552718276673,
+          "duration" : 1122
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_group[None:nameWZD8n8q:headermqdv0n0j:footery3LFB2]",
+        "uid" : "17705a2d190021ea",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718276674,
+          "stop" : 1552718276965,
+          "duration" : 291
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_group[None:nameemVCQFp:header8Jqwmkdm8e1zJUX:footer2]",
+        "uid" : "95c7f390f341eba3",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718277185,
+          "stop" : 1552718277472,
+          "duration" : 287
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lnametxAl:fname]",
+        "uid" : "e5f70e5d79fa012b",
+        "parentUid" : "1f82193b80603ce02034c46c8abaf6dd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1552718273864,
+          "stop" : 1552718275550,
+          "duration" : 1686
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1f82193b80603ce02034c46c8abaf6dd"
+    } ],
+    "uid" : "2d5356bdb7ad768c2030569d2cc893cc"
+  } ]
+}

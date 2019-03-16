@@ -1,0 +1,197 @@
+{
+  "uid" : "52c87c122bad1429",
+  "name" : "test_add_contacts_to_group",
+  "fullName" : "test.test_add_contact_to_group.test_add_contacts_to_group",
+  "historyId" : "69f28e754b4dc9d76f4d26297bdb52b1",
+  "time" : {
+    "start" : 1552718275551,
+    "stop" : 1552718276673,
+    "duration" : 1122
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given a non-empty contact list",
+      "time" : {
+        "start" : 1552718275795,
+        "stop" : 1552718275799,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Given a non-empty group list",
+      "time" : {
+        "start" : 1552718275799,
+        "stop" : 1552718275802,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Get a random contact from the contact list",
+      "time" : {
+        "start" : 1552718275802,
+        "stop" : 1552718275805,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Get a non-empty group list without the contact 105:lnameXSf2vBM:fname0Z8BScbp",
+      "time" : {
+        "start" : 1552718275805,
+        "stop" : 1552718275834,
+        "duration" : 29
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Get a random group without the contact",
+      "time" : {
+        "start" : 1552718275834,
+        "stop" : 1552718275834,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Get contact list for the group 132:name6GR4R:header2mp:footer",
+      "time" : {
+        "start" : 1552718275834,
+        "stop" : 1552718275835,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Add contact 105:lnameXSf2vBM:fname0Z8BScbp to the group 132:name6GR4R:header2mp:footer",
+      "time" : {
+        "start" : 1552718275835,
+        "stop" : 1552718276670,
+        "duration" : 835
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "Assert that contact added to the group",
+      "time" : {
+        "start" : 1552718276670,
+        "stop" : 1552718276672,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "137e0a5a7fbd2416",
+      "name" : "Captured stdout call",
+      "source" : "137e0a5a7fbd2416.txt",
+      "type" : "text/plain",
+      "size" : 8543
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 8,
+    "hasContent" : true,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "Akex-ПК"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "6196-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test.test_add_contact_to_group"
+  }, {
+    "name" : "testClass",
+    "value" : "test.test_add_contact_to_group"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_add_contacts_to_group"
+  }, {
+    "name" : "package",
+    "value" : "test.test_add_contact_to_group"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "52c87c122bad1429.json",
+  "parameterValues" : [ ]
+}

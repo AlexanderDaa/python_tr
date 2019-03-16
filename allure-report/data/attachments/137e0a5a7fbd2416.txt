@@ -1,0 +1,363 @@
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`home`, `c`.`mobile`, `c`.`work`, `c`.`phone2`, `c`.`email`, `c`.`email2`, `c`.`email3`, `c`.`address`, `c`.`address2`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`home`, `c`.`mobile`, `c`.`work`, `c`.`phone2`, `c`.`email`, `c`.`email2`, `c`.`email3`, `c`.`address`, `c`.`address2`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['110']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[110]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['112']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[112]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['113']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[113]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['114']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[114]
+
+SELECT `id`, `firstname`, `lastname`, `home`, `mobile`, `work`, `phone2`, `email`, `email2`, `email3`, `address`, `address2`, `deprecated`
+FROM `addressbook`
+WHERE `id` = %s
+[103]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['115']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[115]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['116']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[116]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['118']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[118]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['119']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[119]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['120']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[120]
+
+SELECT `id`, `firstname`, `lastname`, `home`, `mobile`, `work`, `phone2`, `email`, `email2`, `email3`, `address`, `address2`, `deprecated`
+FROM `addressbook`
+WHERE `id` = %s
+[102]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['121']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[121]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['124']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[124]
+
+SELECT `id`, `firstname`, `lastname`, `home`, `mobile`, `work`, `phone2`, `email`, `email2`, `email3`, `address`, `address2`, `deprecated`
+FROM `addressbook`
+WHERE `id` = %s
+[102]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['125']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[125]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['126']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[126]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['127']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[127]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['128']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[128]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['129']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[129]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['130']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[130]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['131']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[131]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['132']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[132]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['133']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[133]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['135']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[135]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['136']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[136]
+
+SELECT `id`, `firstname`, `lastname`, `home`, `mobile`, `work`, `phone2`, `email`, `email2`, `email3`, `address`, `address2`, `deprecated`
+FROM `addressbook`
+WHERE `id` = %s
+[104]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['132']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[132]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['132']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[132]
+
+SELECT `id`, `firstname`, `lastname`, `home`, `mobile`, `work`, `phone2`, `email`, `email2`, `email3`, `address`, `address2`, `deprecated`
+FROM `addressbook`
+WHERE `id` = %s
+[105]
+
+COMMIT
+RELEASE CONNECTION
